@@ -7,4 +7,5 @@ class Project(models.Model):
     description           =models.CharField(max_length=1000,null=True)
     tech_used           =models.CharField(max_length=300,null=True)
     link           =models.CharField(max_length=50,null=True)
+    project_order           =models.IntegerField(null=True)
  

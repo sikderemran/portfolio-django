@@ -8,7 +8,7 @@ import json
 class work(View):
     def get(self, request):
 
-        works=Project.objects.all()
+        works=Project.objects.all().order_by('project_order','-id')
     
         serialized_data = serializers.serialize('json', works)
         work_data=json.loads(serialized_data)
